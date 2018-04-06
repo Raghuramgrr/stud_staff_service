@@ -1,8 +1,19 @@
-/*Author: Diva
-Date Created: 11/02/18
-Description: http methods for suspending notifications
-Modified By:
-Modified Date:
+/*suspend student 
+
+users - student, teacher 
+
+Story - Teacher suspends student - 
+
+one to many relationship
+
+one teacher can suspend multiple students
+
+update flag-suspended to 1
+
+DB - mysql - Db name - studentregister - table name - class 
+
+Author - Raghu 
+
 */
 
 var express = require('express');

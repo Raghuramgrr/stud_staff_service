@@ -27,9 +27,11 @@ var db = mysql.createConnection({
   database:"studentregister"
   
 });
- db.connect();
- 
 
+
+ db.connect();
+
+ 
 router.post('/', function(req, res) {
     var students = []
     for(var index=0;index<req.body.students.length;index++){

@@ -1,8 +1,18 @@
-/*Author: Diva
-Date Created: 11/02/18
-Description: http methods for suspending notifications
-Modified By:
-Modified Date:
+
+/*get  Notification 
+
+users - student, teacher 
+
+Story - Teacher Notifies student - 
+
+one to many relationship
+
+one teacher mail in req.json and one or multiple student mail in req.json 
+
+DB - mysql - Db name - studentregister - table name - class 
+
+Author - Raghu 
+
 */
 
 

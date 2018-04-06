@@ -14,6 +14,7 @@ Author - Raghu
 
 var express = require('express');
 var router = express.Router();
+var promise = require('promise');
 
 //var db = require('../db_con/db_con')
 
@@ -33,6 +34,7 @@ router.post('/', function(req, res) {
   
     var staff_email = req.body.teachers;
     console.log(staff_email);
+    
     con.query("select stud_email from class where staff_email in (?) group by stud_email ", [staff_email], function(error, results, fields) {
         if (error) throw error;
         var student_list = [];
