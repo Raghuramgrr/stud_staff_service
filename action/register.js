@@ -64,6 +64,7 @@ router.post('/', function(req, res) {
             try {
             if(error){
                 console.log(error)
+                return res.status(400).json({error: true, message: "Duplicate Entry"});
                
             }
             else

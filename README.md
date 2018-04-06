@@ -29,26 +29,54 @@ A set of services for a staff to manage his students
 
 ### 1. register student 
 
-![alt text](/misc/register.jpg "register students")
+![alt text](/screen-shots/register.png "register students")
 
-### 2. Get common student
+### 1.1 Duplicate registration  
 
-![alt text](/misc/common.jpg "Get common students")
+![alt text](/screen-shots/duplicate.png "register students")
 
-### 3. Wrong Email format
-
-
-![alt text](/misc/invalid.jpg "Invalid-email")
+### 1.3 Wrong Email format
 
 
-### 3. Suspend student
+![alt text](/screen-shots/invalid-email.png "Invalid-email")
 
 
-![alt text](/misc/suspend.jpg "Title")
+### 2. Get common student -Multi Teachers
 
-### 4. Notification student 
-
-
-![alt text](/misc/notification.jpg "Title")
+![alt text](/screen-shots/common1.png "Get common students")
 
 
+### 2.1 Get common student-Single Teacher
+
+![alt text](/screen-shots/common2.png "Get common students")
+
+
+### 2.2 Get common student- zero Records found
+
+![alt text](/screen-shots/no-records.png "Get common students")
+
+
+### 3. Suspend student 
+
+
+![alt text](/screen-shots/suspended.png "Title")
+
+
+
+### 3.1 Suspend student -Invalid input
+
+
+![alt text](/screen-shots/suspended.png "Title")
+
+
+
+### 4.1 Notification student 
+
+
+![alt text](/screen-shots/retrieve.png "Title")
+
+
+### 4.2 Notification student - wrong teacher
+
+
+![alt text](/screen-shots/no_retrieval.png "Title")

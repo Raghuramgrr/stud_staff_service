@@ -46,10 +46,9 @@ router.post('/', function(req, res) {
          var student = [students[i].substring(1,students[i].length)];
          list_students.push(student);
     }
-     console.log(list_students)
-     var recepients = [];
-
-    con.query("select distinct stud_email from class where suspended = 0 and (staff_email = ? or stud_email in (?))",[teach, list_students], function(error, results) {
+    console.log(list_students)
+    var recepients = [];
+    con.query("select distinct stud_email from class where suspended is NULL and (staff_email = ? or stud_email in (?))",[teach, list_students], function(error, results) {
         if(error) throw error;
     
         for(var i=0; i<results.length; i++) {
