@@ -43,14 +43,15 @@ router.post('/', function(req, res) {
     let students = notification.split(" ");
     var list_students = [];
     for(var i=2; i<students.length; i++) {
-        list_students.push(students[i].substring(1,students[i].length));
+         var student = [students[i].substring(1,students[i].length)];
+         list_students.push(student);
     }
      console.log(list_students)
      var recepients = [];
 
     con.query("select distinct stud_email from class where suspended = 0 and (staff_email = ? or stud_email in (?))",[teach, list_students], function(error, results) {
         if(error) throw error;
-        console.log(results)
+    
         for(var i=0; i<results.length; i++) {
             recepients.push(results[i].stud_email);
         }
