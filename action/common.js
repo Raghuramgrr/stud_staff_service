@@ -15,9 +15,6 @@ Author - Raghu
 var express = require('express');
 var router = express.Router();
 var promise = require('promise');
-
-//var db = require('../db_con/db_con')
-
 var mysql = require('mysql');
 
 

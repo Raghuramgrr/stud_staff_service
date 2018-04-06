@@ -31,12 +31,21 @@ var db = mysql.createConnection({
 
  db.connect();
 
- 
+
+
+
 router.post('/', function(req, res) {
+    
     var students = []
+    if(!req.body.teacher || !req.body.students) {
+        return res.status(400).json({ error: true, message: "Empty Request"});
+    }
+
+
     for(var index=0;index<req.body.students.length;index++){
+
       if(validator.validate(req.body.students[index]) && validator.validate(req.body.teacher)){
-        var student = {"stud_email": req.body.students[index], "staff_email": req.body.teacher};
+        var student = [req.body.teacher,req.body.students[index]];
         students.push(student);
     }
 
@@ -47,25 +56,30 @@ router.post('/', function(req, res) {
     }
 }
     console.log(students);
-    req.body.students = students;
+   
+  var count=0;
+  var query= "INSERT INTO class (staff_email,stud_email) VALUES ?";
+  db.query(query, [students] , function (error, results) {
 
-
-  db.query("insert into class set ?", students , function (error, results, fields) {
             try {
             if(error){
-                return  res.status(400).json({error: true, message: "Duplicate Entry"});
+                console.log(error)
+               
             }
             else
             {
-              return res.status(200).json({error: false, message: "Students successfully added!"});
+                console.log(++count)
+                return res.status(200).json({error: false, message: "Students successfully added!"});
             }
-            } catch (error) {
+          }catch (error) {
                 console.log(error.message);
                 res.status(400).json({error: true, message: "Duplicate Entry"});
             }
             
         
+
 });
+
 });
 
 
