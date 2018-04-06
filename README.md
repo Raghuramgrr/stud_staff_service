@@ -1,11 +1,17 @@
 # Student,Staff Backend
 A set of services for a staff to manage his students 
-### Technology used
+### Application-stack
 
 * Nodejs
 * Mysql
-* AWS EC-2Deployment 
+* OS - Ubuntu 
+* Protocol - HTTP 
+* SQLInjection attack - prevented 
+* Cross-site scripting - Prevented
+* AWS EC2 Deployment 
 * Tests - CHAI,MOCHA
+* Load-Testing - NA 
+* Perf Testing - NA
 
 ### Installation and Configuration
 
@@ -16,8 +22,10 @@ A set of services for a staff to manage his students
 
 ### Steps to run the app:
 1. Clone the repository into a folder
-2. npm install .
-3. npm start.
+2. run db_init.sql script 
+3. npm install . << Make sure Node,NPM is installed>> 
+4. npm start.
+
 
 * The application is now running in EC2-Instance , Can just give requests to test the application.
 
@@ -66,7 +74,7 @@ A set of services for a staff to manage his students
 ### 3.1 Suspend student -Invalid input
 
 
-![alt text](/screen-shots/suspended.png "Title")
+![alt text](/screen-shots/suspended-2.png "Title")
 
 
 
